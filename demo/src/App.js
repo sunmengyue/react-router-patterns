@@ -15,7 +15,11 @@ function App() {
           render={(routeProps) => <Food {...routeProps} />}
         />
         as
-        <Route exact path="/" render={() => <SearchFood />} />
+        <Route
+          exact
+          path="/"
+          render={(routeProps) => <SearchFood {...routeProps} />}
+        />
         <Route exact path="/food/:foodName/drink/:drinkName" component={Meal} />
         <Route render={() => <h1>Error! Page Not Found</h1>} />
       </Switch>
