@@ -1,5 +1,6 @@
 import './App.css';
 import Food from './Food';
+import Meal from './Meal';
 import { Route } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         path="/food/:name"
         render={(routeProps) => <Food {...routeProps} />}
       />
+      <Route exact path="/food/:foodName/drink/:drinkName" component={Meal} />
     </div>
   );
 }
