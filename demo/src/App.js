@@ -1,6 +1,7 @@
 import './App.css';
 import Food from './Food';
 import Meal from './Meal';
+import Navbar from './Navbar';
 import SearchFood from './SearchFood';
 import { Route, Switch } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       {/* <Route exact path="/food/:name" component={Food} /> */}
+      <Navbar />
       <Switch>
         <Route
           exact
